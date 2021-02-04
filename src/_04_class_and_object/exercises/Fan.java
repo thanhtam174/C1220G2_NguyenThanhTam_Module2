@@ -1,10 +1,10 @@
 package _04_class_and_object.exercises;
 
 public class Fan {
-    final int slow = 1;
-    final int medium = 2;
-    final int fast = 3;
-    private int speed = slow;
+    static final int SLOW = 1;
+    static final int MEDIUM = 2;
+    static final int FAST = 3;
+    private int speed = SLOW;
     private boolean on = false;
     private double radius = 5;
     private String color = "Blue";
@@ -63,8 +63,8 @@ public class Fan {
     }
 
     public static void main(String[] args) {
-        Fan fan1 = new Fan(3, true, 10, "Yellow");
-        Fan fan2 = new Fan(2, false, 5, "Blue");
+        Fan fan1 = new Fan(FAST, true, 10, "Yellow");
+        Fan fan2 = new Fan(MEDIUM, false, 5, "Blue");
         System.out.println("Fan 1: " + fan1.toString());
         System.out.println("Fan 2: " + fan2.toString());
     }
