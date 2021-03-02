@@ -1,6 +1,5 @@
 package _11_map_and_tree.exercises;
 
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Test {
@@ -19,19 +18,19 @@ public class Test {
         productManager.addProduct(product3);
         productManager.addProduct(product4);
 
-        System.out.println("-----Them moi san pham----");
-        productManager.addProduct();
-
-        productManager.delete(3);
-
-        System.out.println("-----Sua thong tin san pham co id = 1 -----");
-        productManager.replace(1);
-
-        System.out.println("Tim kiem san pham");
-        System.out.print("Nhap ten san pham can tim kiem: ");
-        String nameProduct = scanner.nextLine();
-        productManager.search(nameProduct);
-        System.out.println();
+//        System.out.println("-----Them moi san pham----");
+//        productManager.addProduct();
+//
+//        productManager.delete(3);
+//
+//        System.out.println("-----Sua thong tin san pham co id = 1 -----");
+//        productManager.replace(1);
+//
+//        System.out.println("Tim kiem san pham");
+//        System.out.print("Nhap ten san pham can tim kiem: ");
+//        String nameProduct = scanner.nextLine();
+//        productManager.search(nameProduct);
+//        System.out.println();
 
         System.out.println("Danh sach truoc khi sap xep");
         productManager.display();

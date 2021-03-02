@@ -2,7 +2,7 @@ package _11_map_and_tree.exercises;
 
 import java.util.Comparator;
 
-public class Product implements Comparator<Product> {
+public class Product {
     private int id;
     private String nameProduct;
     private double productPrice;
@@ -50,8 +50,5 @@ public class Product implements Comparator<Product> {
                 '}';
     }
 
-    @Override
-    public int compare(Product o1, Product o2) {
-        return 0;
-    }
+
 }
