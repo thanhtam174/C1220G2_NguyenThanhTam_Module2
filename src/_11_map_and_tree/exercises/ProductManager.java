@@ -67,9 +67,10 @@ public class ProductManager {
     }
 
     public void delete(int id) {
-        for (Product product : products) {
-            if (id == product.getId()) {
-                System.out.println(products.remove(product));
+        for (int i = 0; i < products.size(); i++) {
+            if (id == products.get(i).getId()) {
+                products.remove(i);
+                System.out.println("Xoa thanh cong!");
             }
         }
     }

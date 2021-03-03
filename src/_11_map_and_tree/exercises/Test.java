@@ -21,7 +21,9 @@ public class Test {
         System.out.println("-----Them moi san pham----");
         productManager.addProduct();
 
+        System.out.println("--------Xoa san pham co id = 3---------");
         productManager.delete(3);
+        System.out.println();
 
         System.out.println("-----Sua thong tin san pham co id = 1 -----");
         productManager.replace(1);
