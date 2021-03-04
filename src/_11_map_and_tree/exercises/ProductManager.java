@@ -22,16 +22,17 @@ public class ProductManager {
     }
 
     public void replace(int id) {
+        int count = 1;
         for (Product product : products) {
             if (id == product.getId()) {
-                System.out.println("Thong tin san pham: " + product);
+                System.out.println("Thong tin san pham " + count++ + ":" + product);
                 int choose;
                 do {
                     System.out.println("1. ID.");
                     System.out.println("2. Ten san pham.");
                     System.out.println("3. Gia san Pham.");
-                    System.out.println("4. Done");
-                    System.out.println("Chon thong tin can sua:");
+                    System.out.println("0. Done");
+                    System.out.print("Chon thong tin can sua:");
                     choose = scanner.nextInt();
                     switch (choose) {
                         case 1:
@@ -50,28 +51,37 @@ public class ProductManager {
                             product.setProductPrice(newProductPrice);
                             System.out.println(product);
                             break;
-                        case 4:
+                        case 0:
                             break;
                         default:
                             System.out.println("Vui long chon dung cac lua chon co trong menu");
                     }
-                } while (choose != 4);
-                System.out.println("Thong tin sau khi sua doi: " + product);
+                } while (choose != 0);
+                System.out.println("Thong tin sau khi sua doi: ");
+                System.out.println(product);
                 System.out.println();
             }
         }
     }
 
     public void display() {
-        System.out.println(products);
+        System.out.println("--------DANH SACH SAN PHAM--------");
+        for (Product product : products) {
+            System.out.println(product);
+        }
     }
 
     public void delete(int id) {
+        boolean isNotProduct = true;
         for (int i = 0; i < products.size(); i++) {
             if (id == products.get(i).getId()) {
                 products.remove(i);
                 System.out.println("Xoa thanh cong!");
+                isNotProduct = false;
             }
+        }
+        if (isNotProduct) {
+            System.out.println("Khong co san pham nay trong danh sach");
         }
     }
 

@@ -18,27 +18,47 @@ public class Test {
         productManager.addProduct(product3);
         productManager.addProduct(product4);
 
-        System.out.println("-----Them moi san pham----");
-        productManager.addProduct();
+        int choose;
+        do {
+            System.out.println("----------MENU-----------");
+            System.out.println("1. Them moi san pham");
+            System.out.println("2. Sua thong tin san pham");
+            System.out.println("3. Xoa san pham");
+            System.out.println("4. Tim kiem san pham");
+            System.out.println("5. Hien thi danh sach san pham");
+            System.out.println("0. Thoat");
+            System.out.print("Enter number: ");
+            choose = scanner.nextInt();
+            int id;
+            switch (choose) {
+                case 1:
+                    productManager.addProduct();
+                    break;
+                case 2:
+                    System.out.print("Nhap id san pham can sua: ");
+                    id = scanner.nextInt();
+                    productManager.replace(id);
+                    break;
 
-        System.out.println("--------Xoa san pham co id = 3---------");
-        productManager.delete(3);
-        System.out.println();
-
-        System.out.println("-----Sua thong tin san pham co id = 1 -----");
-        productManager.replace(1);
-
-        System.out.println("Tim kiem san pham");
-        System.out.print("Nhap ten san pham can tim kiem: ");
-        String nameProduct = scanner.nextLine();
-        productManager.search(nameProduct);
-        System.out.println();
-
-        System.out.println("Danh sach truoc khi sap xep");
-        productManager.display();
-        productManager.sortProductPrice();
-        System.out.println();
-        System.out.println("Danh sach sau khi sap xep theo gia san pham");
-        productManager.display();
+                case 3:
+                    System.out.print("Nhap id san pham can xoa: ");
+                    id = scanner.nextInt();
+                    productManager.delete(id);
+                    break;
+                case 4:
+                    System.out.print("Nhap ten san pham can tim: ");
+                    String nameProduct = scanner.nextLine();
+                    productManager.search(nameProduct);
+                    break;
+                case 5:
+                    productManager.sortProductPrice();
+                    productManager.display();
+                    break;
+                case 0:
+                    break;
+                default:
+                    System.out.println("Vui long chon cac lua chon trong menu");
+            }
+        } while (choose != 0);
     }
 }

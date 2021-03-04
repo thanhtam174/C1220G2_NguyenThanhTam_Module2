@@ -8,7 +8,7 @@ public class TestTreeMap {
         String str = "anh di anh nho que nha nho canh rau ma nho ca dam tuong";
         String tempStr = str.toLowerCase();
         Map<String, Integer> wordMap = new TreeMap<>();
-        String wordArray[] = str.split(" ");
+        String wordArray[] = tempStr.split(" ");
         for (int i = 0; i < wordArray.length; i++) {
             for (String key : wordMap.keySet()) {
                 if (key.equals(wordArray[i])) {
