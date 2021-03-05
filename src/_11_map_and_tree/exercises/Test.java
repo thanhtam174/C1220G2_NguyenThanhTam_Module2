@@ -47,7 +47,7 @@ public class Test {
                     break;
                 case 4:
                     System.out.print("Nhap ten san pham can tim: ");
-                    String nameProduct = scanner.nextLine();
+                    String nameProduct = scanner.next();
                     productManager.search(nameProduct);
                     break;
                 case 5:
